@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+* {
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+    font-style:normal;
+    line-height: normal;
+
+}
+
+body {
+    background-color: #080808;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:100vh;
+    width:100vw;
+}
+
+main {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: fit-content; /* Ensure it takes the full width */
+   
+    height: 635px; /* Adjust height dynamically */
+    margin: 0 auto; /* Center the main container */
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+    overflow: hidden; /* Prevent content from overflowing */
+}
+
+
+
+main.clouds {
+    background-image: url('../img/cloudy.jpeg');
+}
+
+main.sunny {
+    background-image: url('../img/sunny.jpeg');
+}
+
+
+main.overcast {
+    background-image: url('../img/overcast.jpeg');
+}
+
+main.mist,
+main.Mist,
+main.haze,
+main.smoke {
+    background-image: url('../img/mist.jpeg');
+}
+
+main.rain {
+    background-image: url('../img/rain.jpeg');
+}
+
+main.snow {
+    background-image: url('../img/snow.jpeg');
+}
+
+main.sleet{
+    background-image: url('../img/sleet.jpeg');
+}
+
+main.drizzle{
+    background-image: url('../img/drizzle.jpeg');
+}
+
+main.thunder,
+main.thundery {
+    background-image: url('../img/thunder.jpeg');
+}
+
+
+main.blizzard {
+    background-image: url('../img/blizzard.jpeg');
+}
+
+main.fog {
+    background-image: url('../img/fog.jpeg');
+}
+
+main.ice {
+    background-image: url('../img/ice.jpeg');
+}
+
+
+main.shower {
+    background-image: url('../img/shower.jpeg');
+}
+
+main.showers {
+    background-image: url('../img/showers.jpeg');
+}
+
+main.clear{
+    background-image: url('../img/clear.jpeg');
+}
+
+.side-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:300px;
+    padding:50px;
+    height:100%;
+
+    border-right:  1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(22.5px);
+}
+/* INPUTS */
+.search-container{
+    width:100%;
+    padding-bottom:6px;
+    margin-bottom:55px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-bottom: 1px solid #ffffff;
+}
+
+
+.geo-input {
+    all:unset;
+    flex:1;
+    width:100%;
+    margin:0 10px;
+    color: rgba(255, 255, 255, 1);
+    font-size: 13px;
+}
+
+.geo-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    
+}
+
+.search-button{
+    border:none;
+    background:transparent;
+    -webkit-animation: none;
+    height:22px;
+    cursor:pointer;
+
+}
+
+/* Day-stats */
+.day-stats{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom:60px;
+    z-index: 2;
+
+}
+
+.day-stats_temperature{
+    color: #fff; /* Lighter orange on hover */
+  
+    font-size:50px;
+    line-height: 100%;
+
+}
+
+.day-stats_temperature_value,
+.forecast-temperatureValue {
+    color: #FF4500; /* Orange for temperature */
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.day-stats_feelslike{
+    color: #fff; /* Lighter orange on hover */
+   
+    font-size:20px;
+    font-weight:300;
+    margin-bottom: 6px;
+    margin-top: 9px;
+}
+
+.day-stats_feelslike_value {
+    color: #FF6347; /* Lighter orange for "Feels like" */
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.day-stats_conditions{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    width:100%;
+    margin-top: 20px;
+}
+
+.day-stats_conditions li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+
+}
+
+.day-stats_condition{
+    color:#fff;
+    font-size: 24px;
+    line-height: 100%;
+
+}
+
+.day-stats_condition_text{
+    color:#fff;
+    font-size: 13px;
+}
+
+.day-stats_humidity {
+    color: #ffffff; /* White color for side box humidity */
+    font-size: 24px; /* Larger font size for side box */
+    font-weight: bold; /* Make it bold */
+    text-align: center; /* Center align the text */
+    margin: 5px 0; /* Add spacing around the text */
+}
+
+/*MAIN CONTAINER*/
+/*.main-container{
+    position:relative;
+\    height:530px;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    padding:0 75px;
+
+    background-image: url('../img/main-blur.png');
+}*/
+.main-container {
+    position: relative;
+    width: calc(100% - 100px); /* Adjust width to make it larger */
+   min-height: 700px; /* Adjust height to fit content */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: flex-start; /* Align content to the left */
+    padding: 50px; /* Add padding for better spacing */
+    
+}
+
+.secondary-title{
+    margin-bottom:17px;
+    color:#fff;
+    font-size:18px;
+
+}
+
+.weather_primary-title{
+    margin-bottom: 16px;
+    color:#FF4500;
+    font-size:38px;
+    line-height: 100%;
+    letter-spacing: -1.9px;
+
+
+}
+
+.weather_location{
+    display: flex;
+    align-items: center;
+    margin-bottom: 26px;
+    gap: 10px;
+}
+
+.location-icon{
+    display: flex;
+    margin-right: 8px;
+    margin-bottom: 7px;
+    display: flex; /* Align icon and text horizontally */
+    align-items: center; /* Vertically center the icon */
+    justify-content: center; /* Center the icon horizontally if needed */
+    margin-right: 8px;
+
+}
+
+.location_icon i {
+    font-size: 16px; /* Adjust the size of the icon */
+    color: #fff; /* Ensure the icon color matches your design */
+}
+
+.weather_location-text{
+    color:#fff;
+    font-size: 13px;
+    line-height: 1.5;
+   
+}
+
+.weather_primary-stats{
+    width:360px;
+    color:#fff;
+    font-size: 13px;
+    margin-bottom: 80px;
+
+}
+
+/*forecast stats*/
+.forecast{
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    list-style: none;
+    padding: 10px 0;
+
+}
+
+.forecast-item{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 20px 0; /* Add padding to make the box larger */
+    margin: 20px 0;
+}
+
+/* Time styling */
+.forecast-time {
+    color: #fff; /* Gold color for time */
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px; /* Space between time and temperature */
+    text-align: center;
+}
+
+/* Temperature styling */
+.forecast-temperatureValue {
+    color: #fff; /* Orange for temperature */
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Humidity text styling */
+.forecastWindText {
+    color: #fff; /* Color for "Humidity:" text */
+    font-size: 14px; /* Smaller font size */
+    font-weight: normal; /* Remove bold if needed */
+    text-align: center; /* Center align the text */
+    margin-bottom: 5px; /* Add spacing below */
+}
+
+/* Humidity value styling */
+.forecast-humidityValue {
+    color: #fff; /* Lighter orange on hover */
+     font-size: 15px; /* Smaller font size */
+    font-weight: bold; /* Remove bold if needed */
+    margin-left: 0px; /* Add small spacing between "Humidity:" and the value */
+}
+
+.forecast-temperature{
+    color:#fff;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 100%;
+}
+
+
+
+#
+   
+
+
+/* Humidity styling */
+
+
+
+/* Optional: Add hover effects */
+.day-stats_temperature_value:hover,
+.forecast-temperatureValue:hover {
+    color: #FF6347; /* Lighter orange on hover */
+    text-decoration: underline;
+}
+
+.day-stats_humidity:hover,
+.forecast-humidityValue:hover {
+    color: #000509; /* Lighter blue on hover */
+    text-decoration: underline;
+}
+
+.side-blur {
+    width: 100%; /* Ensure the image has a width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure the image is displayed */
+}
